@@ -5,7 +5,9 @@ ANSI <-> UNICODE <-> UTF-8的lua扩展
 How to use
 ==========
 -- 假定dll文件位于C:\Unicode.dll
+
 -- 假定中文路径的文件名为C:\哈哈.xls
+
 -- 假定C:\Unicode.csv为一个UTF-16LE编码文件
 
 ```lua
