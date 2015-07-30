@@ -455,6 +455,7 @@ int __cdecl __declspec (dllexport) luaopen_Pear (lua_State * L)
 	return 1;
 }
 
+
 /*
 gcc Pear.c -I"C:\MinGW\include\lua" -L"C:\MinGW\lib" -lmingw32 -llua -lcomdlg32 -shared -o C:\Pear.dll
 */
