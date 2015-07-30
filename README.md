@@ -31,6 +31,8 @@ a2u8 =Unicode.a2u8
 getallfilewc = Unicode.getallfilewc
 getallfilews = Unicode.getallfilews
 getfilesizew= Unicode.getfilesizew
+cmd =Pear.runcmd
+opendialog =Pear.opendialog
 
 print(getfilesizew("C:\\Unicode.csv"))
 local x = os.clock()
@@ -47,4 +49,18 @@ if oExcel == nilthen error("Objectis not create") end
     oExcel.Visible = 1
     oExcel.WorkBooks:Open(a2u8("C:\\哈哈.xls"),nil,0)
     oExcel.ActiveWorkbook.Sheets(1):Select()
+
+t=opendialog("All Files(*.*)\0*.*\0")
+print(t)
+
+c=cmd( "ping 202.102.192.68")
+print(c)
+
+d=cmd("dir")
+print(d)
+
+e=cmd("ipconfig")
+print (e)
+
+
 ```
