@@ -1,28 +1,28 @@
 ﻿##LuaUnicode
-==========
+===
 ANSI <-> UNICODE <-> UTF-8的lua扩展
-目前仅支持5.1版本的Lua，5.2-5.3由于变更了新的c函数注册机制，暂时没有时间更新
+
+目前仅支持5.1版本的Lua(5.1.5已测试通过)，5.2-5.3由于变更了新的c函数注册机制，暂时没有时间更新
 
 ##How to Compile
-==========
+===
 假设MinGW安装在C:\MinGW
 
 ```bash
 gcc Lua_Unicode.c -I"C:\MinGW\include\lua" -L"C:\MinGW\lib" -lmingw32 -llua -lcomdlg32 -shared -o C:\Lua_Unicode.dll
 ```
 
-
 ##How to Use
-==========
--- 假定dll文件位于C:\Unicode.dll
+===
+--假定dll文件位于C:\Lua_Unicode.dll
 
--- 假定中文路径的文件名为C:\哈哈.xls
+--假定中文路径的文件名为C:\哈哈.xls
 
--- 假定C:\Unicode.csv为一个UTF-16LE编码文件
+--假定C:\Unicode.csv为一个UTF-16LE编码文件
 
 ```lua
 require "luacom"
-local unicode = package.loadlib("C:\\Unicode.dll","luaopen_Unicode")
+local unicode = package.loadlib("C:\\Lua_Unicode.dll","luaopen_Unicode")
 
 if(unicode)then
     unicode()
